@@ -1,0 +1,1 @@
+export const PUT_DEFAULTS = 'PUT_DEFAULTS';
