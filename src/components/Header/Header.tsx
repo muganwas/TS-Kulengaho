@@ -1,18 +1,21 @@
-import React from 'react';
-import './Header.scss';
-import logo from '../../images/logo.svg';
+import React from 'react'
+import './Header.scss'
+import { genInfoReducer } from '../../sharedTypes'
+import logo from '../../images/logo.svg'
 
-interface Props {
-    title: String;
-};
+interface headerProps {
+  title: String
+  genInfo: genInfoReducer
+}
 
-const Header: React.FC<Props> = ({title}) => {
-    return (
-        <div className='header-container'>
-            <img className='logo' src={logo} />
-            <div className='header-text'>{title}</div>
-        </div>
-    )
-};
+const Header: React.FC<headerProps> = ({ title, genInfo }) => {
+  return (
+    <div className='header-container'>
+      <img alt='logo' className='logo' src={logo} />
+      <div className='header-text'>{title}</div>
+      <div className='sub-title'>{genInfo.site_subtitle}</div>
+    </div>
+  )
+}
 
-export default Header;
+export default Header

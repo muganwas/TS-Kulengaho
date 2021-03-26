@@ -3,6 +3,7 @@ import thunk from 'redux-thunk';
 import promise from 'redux-promise-middleware';
 import { apiMiddleware } from 'redux-api-middleware';
 import logger from 'redux-logger';
+import generalInfoReducer from './reducers/generalInfoReducer';
 
 var middleware;
 // apply logger only in development and staging
@@ -12,7 +13,7 @@ else middleware = applyMiddleware(promise, thunk, apiMiddleware);
 const initialState = {};
 
 const allReducers = combineReducers({
-//put all reducers here
+    genInfo: generalInfoReducer
 });
 
 const store = createStore(
