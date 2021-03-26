@@ -1,12 +1,14 @@
+@import '../../styles/colors.scss';
 .header-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    background-color: $lightGrey;
     padding: 5px;
     .header-text {
         font-weight: bold;
-        font-size: 25px;
+        font-size: 15px;
     }
     .logo{
         width: 40px;
