@@ -1,4 +1,4 @@
-import { PUT_DEFAULTS, PUT_SITE_NAME } from '../types'
+import { PUT_DEFAULTS, PUT_SITE_SUB_TITLE } from '../types'
 import { genInfoReducer } from '../../sharedTypes'
 
 const defaultState: genInfoReducer = {
@@ -10,7 +10,7 @@ const generalInfoReducer: (state: genInfoReducer, action: any) => Object = (
   action
 ) => {
   switch (action.type) {
-    case PUT_SITE_NAME:
+    case PUT_SITE_SUB_TITLE:
       return {
         ...state,
         site_subtitle: action.payload,

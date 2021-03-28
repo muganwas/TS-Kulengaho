@@ -1,18 +1,29 @@
 @import '../../styles/colors.scss';
+@import '../../styles/font-sizes.scss';
 .header-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: $lightGrey;
   padding: 5px;
-  .header-text {
-    font-weight: bold;
-    font-size: 15px;
+  .logo-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .header-text {
+      font-weight: bold;
+      font-size: $page-title;
+    }
+    .logo {
+      width: 40px;
+      height: auto;
+      margin: 5px;
+    }
   }
-  .logo {
-    width: 40px;
-    height: auto;
-    margin: 5px;
+  .sub-title {
+    font-size: $page-subtitle;
+    text-transform: lowercase;
+    font-style: italic;
   }
 }
