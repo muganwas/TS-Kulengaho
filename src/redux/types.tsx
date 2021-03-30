@@ -1,2 +1,5 @@
-export const PUT_DEFAULTS = 'PUT_DEFAULTS'
+export const RESET_GEN_INFO = 'RESET_GEN_INFO'
 export const PUT_SITE_SUB_TITLE = 'PUT_SITE_SUB_TITLE'
+export const PUT_USER_NAME = 'PUT_USER_NAME'
+export const PUT_PASSWORD = 'PUT_PASSWORD'
+export const RESET_USER_INFO = 'RESET_USER_INFO'

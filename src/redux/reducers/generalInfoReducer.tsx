@@ -1,4 +1,4 @@
-import { PUT_DEFAULTS, PUT_SITE_SUB_TITLE } from '../types'
+import { RESET_GEN_INFO, PUT_SITE_SUB_TITLE } from '../types'
 import { genInfoReducer } from '../../sharedTypes'
 
 const defaultState: genInfoReducer = {
@@ -15,9 +15,9 @@ const generalInfoReducer: (state: genInfoReducer, action: any) => Object = (
         ...state,
         site_subtitle: action.payload,
       }
-    case PUT_DEFAULTS:
+    case RESET_GEN_INFO:
       return {
-        site_subtitle: 'Kulengaho',
+        ...defaultState,
       }
     default:
       return {
