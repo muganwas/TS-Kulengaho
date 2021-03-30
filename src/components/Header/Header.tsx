@@ -12,7 +12,7 @@ const Header: React.FC<headerProps> = ({ title, genInfo }) => {
   return (
     <div className='header-container'>
       <div className='logo-title-container'>
-        <img alt='logo' className='logo' src={logo} />
+        <img data-testid='logo' alt='logo' className='logo' src={logo} />
         <div className='header-text'>{title}</div>
       </div>
       <div className='sub-title'>{genInfo.site_subtitle}</div>
