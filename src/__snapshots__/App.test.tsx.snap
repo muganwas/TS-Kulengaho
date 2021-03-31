@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Landing page renders renders sub-title 1`] = `
+<div
+  className="home-container"
+  data-testid="home-container"
+>
+  <div
+    className="header-container"
+  >
+    <div
+      className="logo-title-container"
+    >
+      <img
+        alt="logo"
+        className="logo"
+        data-testid="logo"
+        src="logo.svg"
+      />
+      <div
+        className="header-text"
+      >
+        Welcome to TSX
+      </div>
+    </div>
+    <div
+      className="sub-title"
+    >
+      Kulengaho
+    </div>
+  </div>
+  <div>
+    <div
+      className="login-component-container"
+      data-testid="login-component-container"
+    >
+      <div
+        className="text-input-container"
+      >
+        <label>
+          Username
+        </label>
+        <input
+          className="text-input"
+          data-testid="username-login"
+          id="user-name"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Username"
+          type="string"
+          value=""
+        />
+      </div>
+      <div
+        className="text-input-container"
+      >
+        <label>
+          Password
+        </label>
+        <input
+          className="text-input"
+          data-testid="password-login"
+          id="password"
+          onBlur={[Function]}
+          onChange={[Function]}
+          placeholder="Password"
+          type="password"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

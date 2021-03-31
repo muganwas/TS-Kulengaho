@@ -1,12 +1,17 @@
-import { render } from '@testing-library/react'
+import renderer from 'react-test-renderer'
+import { Provider } from 'react-redux'
+import store from '../../redux/store'
 import Header from './Header'
 
 describe('Header component renders', () => {
-  test('renders logo', () => {
-    const { getByTestId } = render(
-      <Header title='kulengaho' genInfo={{ site_subtitle: '' }} />
-    )
-    const logoElement = getByTestId('logo')
-    expect(logoElement).toBeInTheDocument()
+  it('renders logo', () => {
+    const tree = renderer
+      .create(
+        <Provider store={store}>
+          <Header title='Kulengaho' />
+        </Provider>
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })

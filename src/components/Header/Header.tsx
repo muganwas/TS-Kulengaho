@@ -1,21 +1,24 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import './Header.scss'
-import { genInfoReducer } from '../../sharedTypes'
+import { RootState } from '../../sharedTypes'
 import logo from '../../images/logo.svg'
 
 interface headerProps {
   title: String
-  genInfo: genInfoReducer
 }
 
-const Header: React.FC<headerProps> = ({ title, genInfo }) => {
+const Header: React.FC<headerProps> = ({ title }) => {
+  const subTitle = useSelector(
+    (store: RootState) => store.genInfo.site_subtitle
+  )
   return (
     <div className='header-container'>
       <div className='logo-title-container'>
         <img data-testid='logo' alt='logo' className='logo' src={logo} />
         <div className='header-text'>{title}</div>
       </div>
-      <div className='sub-title'>{genInfo.site_subtitle}</div>
+      <div className='sub-title'>{subTitle}</div>
     </div>
   )
 }

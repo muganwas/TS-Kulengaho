@@ -1,10 +1,9 @@
-import { render } from '@testing-library/react'
+import renderer from 'react-test-renderer'
 import App from './App'
 
 describe('Landing page renders', () => {
-  test('renders sub-title', () => {
-    const { getByText } = render(<App />)
-    const subtitle = getByText(/kulengaho/i)
-    expect(subtitle).toBeInTheDocument()
+  it('renders sub-title', () => {
+    const tree = renderer.create(<App />).toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })

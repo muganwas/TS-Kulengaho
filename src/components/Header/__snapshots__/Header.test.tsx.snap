@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header component renders renders logo 1`] = `
+<div
+  className="header-container"
+>
+  <div
+    className="logo-title-container"
+  >
+    <img
+      alt="logo"
+      className="logo"
+      data-testid="logo"
+      src="logo.svg"
+    />
+    <div
+      className="header-text"
+    >
+      Kulengaho
+    </div>
+  </div>
+  <div
+    className="sub-title"
+  >
+    Kulengaho
+  </div>
+</div>
+`;

@@ -4,7 +4,7 @@ import store from '../../redux/store'
 import Home from './Home'
 
 describe('Home component renders', () => {
-  test('renders container', () => {
+  it('renders container', () => {
     render(
       <Provider store={store}>
         <Home />

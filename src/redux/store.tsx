@@ -7,7 +7,7 @@ import { generalInfoReducer, userInfoReducer } from './reducers'
 
 var middleware
 // apply logger only in development and staging
-if (process.env.NODE_ENV !== 'production')
+if (process.env.NODE_ENV !== 'production' && process.env.NODE_ENV !== 'test')
   middleware = applyMiddleware(promise, thunk, apiMiddleware, logger)
 else middleware = applyMiddleware(promise, thunk, apiMiddleware)
 

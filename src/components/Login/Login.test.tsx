@@ -4,7 +4,7 @@ import store from '../../redux/store'
 import Login from './Login'
 
 describe('Login component renders', () => {
-  test('renders login container', () => {
+  it('renders login container and input components', () => {
     render(
       <Provider store={store}>
         <Login />
