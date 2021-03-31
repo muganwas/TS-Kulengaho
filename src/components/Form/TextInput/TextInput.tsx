@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { generic_input_func } from '../../sharedTypes'
-import './Form.scss'
+import { generic_input_func } from '../../../sharedTypes'
+import './TextInput.scss'
 
 interface loginProps {
   id: string

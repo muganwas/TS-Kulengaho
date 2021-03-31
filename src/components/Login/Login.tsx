@@ -27,7 +27,7 @@ const Login: React.FC = () => {
         id='user-name'
         label='Username'
         testid='username-login'
-        placeholder='Enter user name'
+        placeholder='Your username'
         onBlur={usernameChange}
       />
       <TextInput
@@ -35,7 +35,7 @@ const Login: React.FC = () => {
         label='Password'
         inputType='password'
         testid='password-login'
-        placeholder='Password'
+        placeholder='Your password'
         onBlur={usernameChange}
       />
     </div>
