@@ -19,6 +19,7 @@ const userInfoReducer: (state: usrInfoReducer, action: any) => Object = (
       }
     case PUT_PASSWORD:
       return {
+        ...state,
         user_password: action.payload,
       }
     case RESET_USER_INFO:

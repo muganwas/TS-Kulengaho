@@ -15,7 +15,7 @@ export const updateUsername: (nm: String) => generic_action_object = (name) => {
   }
 }
 
-export const updateUserPassowrd: (pw: String) => generic_action_object = (
+export const updateUserPassword: (pw: String) => generic_action_object = (
   password
 ) => {
   return {

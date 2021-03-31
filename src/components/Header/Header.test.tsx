@@ -4,7 +4,7 @@ import store from '../../redux/store'
 import Header from './Header'
 
 describe('Header component renders', () => {
-  it('renders logo', () => {
+  it('snapshot checks out', () => {
     const tree = renderer
       .create(
         <Provider store={store}>

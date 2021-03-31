@@ -24,4 +24,7 @@ export type RootState = ReturnType<
 export type generic_input_func = (
   e: React.ChangeEvent<HTMLInputElement>
 ) => void
+
+export type generic_form_func = (e: React.FormEvent<HTMLFormElement>) => void
+export type submit_button_func = React.MouseEventHandler<HTMLButtonElement>
 export type generic_action_object = { type: string; payload: any }
