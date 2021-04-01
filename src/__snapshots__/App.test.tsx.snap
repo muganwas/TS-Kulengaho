@@ -49,7 +49,7 @@ exports[`Landing page renders snapshot checksout 1`] = `
               Username
             </label>
             <input
-              className="text-input"
+              className="text-input "
               data-testid="username-login"
               id="user-name"
               onChange={[Function]}
@@ -57,6 +57,7 @@ exports[`Landing page renders snapshot checksout 1`] = `
               type="string"
               value=""
             />
+            
           </div>
           <div
             className="text-input-container"
@@ -65,7 +66,7 @@ exports[`Landing page renders snapshot checksout 1`] = `
               Password
             </label>
             <input
-              className="text-input"
+              className="text-input "
               data-testid="password-login"
               id="password"
               onChange={[Function]}
@@ -73,6 +74,7 @@ exports[`Landing page renders snapshot checksout 1`] = `
               type="password"
               value=""
             />
+            
           </div>
           <div
             className="button-container"

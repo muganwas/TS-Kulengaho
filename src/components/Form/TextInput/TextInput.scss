@@ -1,11 +1,28 @@
+@import '../../../styles/colors.scss';
 .text-input-container {
   display: flex;
   flex-direction: column;
   .text-input {
-    margin: 5px;
     padding: 5px;
+    border-radius: 5px;
+    border: thin solid $lightGrey;
+    &.error {
+      color: $white;
+      background-color: $pink;
+      &::placeholder {
+        color: $white;
+      }
+    }
+  }
+  .error-container {
+    padding: 2px;
+    margin: 3px;
+    font-size: 12px;
+    font-weight: bold;
+    color: $pink;
   }
   label {
+    padding: 5px 0;
     font-size: 14px;
     font-weight: 700;
   }

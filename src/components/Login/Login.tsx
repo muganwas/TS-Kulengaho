@@ -2,19 +2,25 @@ import React from 'react'
 import { Dispatch } from 'redux'
 import { useSelector, useDispatch } from 'react-redux'
 import { TextInput, Form, Button } from '../Form'
-import { updateUsername, updateUserPassword } from '../../redux/actions'
+import {
+  updateUsername,
+  updateUserPassword,
+  setUserNameError,
+  setUserPasswordError,
+} from '../../redux/actions'
 import {
   generic_input_func,
   RootState,
   generic_form_func,
 } from '../../sharedTypes'
+import { AuthControllers } from '../../controllers'
 import './Login.scss'
 
 const Login: React.FC = () => {
   const dispatch: Dispatch<any> = useDispatch()
   const userInfo = useSelector((store: RootState) => store.userInfo)
 
-  const usernameChange: generic_input_func = (e) => {
+  const valueChange: generic_input_func = (e) => {
     e.preventDefault()
     const id = e.target.id
     const value = e.target.value
@@ -23,8 +29,17 @@ const Login: React.FC = () => {
   }
   const onFormSubmit: generic_form_func = (e) => {
     e.preventDefault()
-    console.log('user name', userInfo.user_name)
-    console.log('user password', userInfo.user_password)
+    const usernameCheck = AuthControllers.username_check(userInfo.user_name)
+    const passwordCheck = AuthControllers.password_check(userInfo.user_password)
+    if (!usernameCheck.passed) {
+      dispatch(setUserNameError(usernameCheck.msg))
+      return
+    }
+    if (!passwordCheck.passed) {
+      dispatch(setUserPasswordError(passwordCheck.msg))
+      return
+    }
+    console.log('all checks passed...')
   }
   return (
     <div
@@ -35,19 +50,21 @@ const Login: React.FC = () => {
         <TextInput
           id='user-name'
           value={userInfo.user_name}
+          error={userInfo.user_name_error}
           label='Username'
           testid='username-login'
           placeholder='Username'
-          onChange={usernameChange}
+          onChange={valueChange}
         />
         <TextInput
           id='password'
           value={userInfo.user_password}
+          error={userInfo.user_password_error}
           label='Password'
           inputType='password'
           testid='password-login'
           placeholder='Password'
-          onChange={usernameChange}
+          onChange={valueChange}
         />
         <Button
           id='submit-button'

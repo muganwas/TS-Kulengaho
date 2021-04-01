@@ -7,7 +7,9 @@ export type genInfoReducer = {
 
 export type usrInfoReducer = {
   user_name: string
+  user_name_error: string
   user_password: string
+  user_password_error: string
   is_logged_in: boolean
 }
 

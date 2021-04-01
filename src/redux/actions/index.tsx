@@ -1,4 +1,10 @@
-import { PUT_SITE_SUB_TITLE, PUT_USER_NAME, PUT_PASSWORD } from '../types'
+import {
+  PUT_SITE_SUB_TITLE,
+  PUT_USER_NAME,
+  PUT_PASSWORD,
+  SET_USER_NAME_ERROR,
+  SET_USER_PASSWORD_ERROR,
+} from '../types'
 import { generic_action_object } from '../../sharedTypes'
 
 export const updateSiteName: (nm: String) => generic_action_object = (name) => {
@@ -21,5 +27,23 @@ export const updateUserPassword: (pw: String) => generic_action_object = (
   return {
     type: PUT_PASSWORD,
     payload: password,
+  }
+}
+
+export const setUserNameError: (err: String) => generic_action_object = (
+  error
+) => {
+  return {
+    type: SET_USER_NAME_ERROR,
+    payload: error,
+  }
+}
+
+export const setUserPasswordError: (err: String) => generic_action_object = (
+  error
+) => {
+  return {
+    type: SET_USER_PASSWORD_ERROR,
+    payload: error,
   }
 }

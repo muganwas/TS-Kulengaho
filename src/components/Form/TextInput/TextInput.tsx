@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { generic_input_func } from '../../../sharedTypes'
 import './TextInput.scss'
 
-interface loginProps {
+interface inputProps {
   id: string
   label?: string
   value?: string
+  error?: string
   onChange?: generic_input_func
   onBlur?: generic_input_func
   placeholder?: string
@@ -15,12 +16,13 @@ interface loginProps {
   inputClass?: string
 }
 
-const TextInput: React.FC<loginProps> = ({
+const TextInput: React.FC<inputProps> = ({
   id,
   label,
   value,
   placeholder,
   containerClass,
+  error,
   inputType,
   testid,
   inputClass,
@@ -39,12 +41,13 @@ const TextInput: React.FC<loginProps> = ({
         id={id}
         data-testid={testid}
         value={value || localValue}
-        className={inputClass || 'text-input'}
+        className={`${inputClass || 'text-input'} ${error ? 'error' : ''}`}
         placeholder={placeholder}
         type={inputType || 'string'}
         onChange={onChange || localOnChange}
         onBlur={onBlur}
       />
+      {error && <span className='error-container'>{error}</span>}
     </div>
   )
 }
