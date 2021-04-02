@@ -16,7 +16,7 @@ const password_check: (u: string) => { msg: string; passed: boolean } = (
     if (password.match(passwordRegex)) {
       return { msg: 'success', passed: true }
     } else {
-      return { msg: 'Incorrect password format', passed: false }
+      return { msg: 'incorrect password format', passed: false }
     }
   } else {
     return { msg: 'password too short!', passed: false }

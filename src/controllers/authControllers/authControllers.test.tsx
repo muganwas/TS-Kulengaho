@@ -12,15 +12,15 @@ describe('password_check method tests', () => {
   it('password_check method exists', () => {
     expect(password_check).toBeDefined()
   })
-  it('picks correct password', () => {
+  it('picks good password format', () => {
     expect(password_check(correctPass)).toStrictEqual({
       msg: 'success',
       passed: true,
     })
   })
-  it('picks wrong password format', () => {
+  it('picks bad password format', () => {
     expect(password_check(wrongPass)).toStrictEqual({
-      msg: 'Incorrect password format',
+      msg: 'incorrect password format',
       passed: false,
     })
   })
