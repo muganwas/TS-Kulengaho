@@ -1,17 +1,16 @@
-import renderer from 'react-test-renderer'
+import { render, screen } from '@testing-library/react'
 import { Provider } from 'react-redux'
 import store from '../../redux/store'
 import Header from './Header'
 
 describe('Header component renders', () => {
-  it('snapshot checks out', () => {
-    const tree = renderer
-      .create(
-        <Provider store={store}>
-          <Header title='Kulengaho' />
-        </Provider>
-      )
-      .toJSON()
-    expect(tree).toMatchSnapshot()
-  })
+	it('snapshot checks out', () => {
+		render(
+			<Provider store={store}>
+				<Header title='Kulengaho' />
+			</Provider>
+		)
+		const container = screen.getAllByTestId('header-container')
+		expect(container).toMatchSnapshot()
+	})
 })

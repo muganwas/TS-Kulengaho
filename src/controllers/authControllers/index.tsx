@@ -1,4 +1,5 @@
 import { passwordRegex } from '../../constants'
+
 const username_check: (u: string) => { msg: string; passed: boolean } = (
   username
 ) => {
@@ -23,7 +24,9 @@ const password_check: (u: string) => { msg: string; passed: boolean } = (
   }
 }
 
-export default {
+const authControllers = {
   username_check,
   password_check,
 }
+
+export default authControllers

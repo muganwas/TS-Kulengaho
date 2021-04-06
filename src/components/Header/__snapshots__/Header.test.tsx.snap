@@ -1,28 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Header component renders snapshot checks out 1`] = `
-<div
-  className="header-container"
->
+Array [
   <div
-    className="logo-title-container"
+    class="header-container"
+    data-testid="header-container"
   >
-    <img
-      alt="logo"
-      className="logo"
-      data-testid="logo"
-      src="logo.svg"
-    />
     <div
-      className="header-text"
+      class="logo-title-container"
+    >
+      <img
+        alt="logo"
+        class="logo"
+        data-testid="logo"
+        src="logo.svg"
+      />
+      <div
+        class="header-text"
+      >
+        Kulengaho
+      </div>
+    </div>
+    <div
+      class="sub-title"
     >
       Kulengaho
     </div>
-  </div>
-  <div
-    className="sub-title"
-  >
-    Kulengaho
-  </div>
-</div>
+  </div>,
+]
 `;
